@@ -61,6 +61,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("send move", (data) => {
+    console.log(data);
     let me = {};
     for (let i = 0; i < socketToPosition.length; i++) {
       if (socketToPosition[i].id === data.id) {
